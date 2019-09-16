@@ -1,0 +1,17 @@
+<!--pages/type_pre/type_pre.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">专题练习</view>
+    <view class="page__desc">欢迎练习</view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-grids">
+      <block wx:for="{{grids}}" wx:key="*this">
+        <navigator url="/pages/index/exam/exam?type={{item.type}}" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="{{item.src}}" />
+          <view class="weui-grid__label">{{item.type}}</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>

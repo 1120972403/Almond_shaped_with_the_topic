@@ -1,0 +1,137 @@
+/* pages/play/play.wxss */
+.swiper_itm{
+  height:500px;
+}
+.error_an{
+  color: #FF0000;
+  font-size: 32rpx;
+}
+
+.answer_txt1{
+   line-height: 60rpx;
+  padding: 20rpx;
+  font-size: 30rpx;
+  color: red;
+}
+/* 题号部分 */
+
+.main {
+  margin: 20rpx;
+  font-size: 34rpx;
+}
+
+/* 问题部分 */
+
+.question {
+  display: block;
+  /* height: 150rpx; */
+  padding: 27rpx 30rpx 36rpx;
+ font-size: 30rpx;
+  background: #fff;
+}
+
+.xuanz {
+  display: inline-block;
+  margin: -5rpx 0 0;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  /* border: 1rpx solid #ccc; */
+  width: 90rpx;
+  text-align: center;
+  line-height: 34rpx;
+  vertical-align: middle;
+  background-color: #1296DB;
+  color: white;
+}
+
+/* 题  目 */
+
+.question .question_name {
+  /* display: flex; */
+font-size: 28rpx;
+  margin-top: 10rpx;
+}
+
+.question_item1, .question_item2, .question_item3 {
+  margin: 20rpx;
+  font-size: 30rpx;
+  /* border-bottom: 1px solid gainsboro; */
+}
+
+/* 下一题 */
+
+.next {
+  background: #1bd0bd;
+  border-radius: 50rpx;
+  width: 300rpx;
+  height: 80rpx;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: white;
+  margin-top: 100rpx;
+}
+
+.css-shadow {
+  -moz-box-shadow: 2px 2px 10px #2db7f5;
+  -webkit-box-shadow: 2px 2px 10px #2db7f5;
+  box-shadow: 2px 2px 10px #2db7f5;
+}
+
+/* 答案解析 */
+
+.analysis {
+  line-height: 60rpx;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 100rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  font-size: 35rpx;
+  color: red;
+}
+
+.jd-txt {
+  border-radius: 5px;
+  border: 1px solid gainsboro;
+  box-shadow: 0px 2px 5px 5px gainsboro;
+  margin-top: 12rpx;
+   font-size: 30rpx;
+}
+
+.txt {
+  margin-left: 5rpx;
+  line-height: 60rpx;
+}
+
+/* 底部菜单 */
+.weui-flex{
+float: right;
+}
+.placeholder {
+  
+  bottom: 0px;
+  margin: 5px;
+  padding: 0 10px;
+  text-align: center;
+  height: 2.3em;
+  line-height: 2.3em;
+}
+
+.item-store {
+  width: 14px;
+  height: 14px;
+  margin-right:5rpx; 
+}
+
+
+.bo-txt{
+  text-align: center;
+  justify-items: center;
+  font-size: 12px;
+  color: gainsboro;
+  margin-left:5rpx; 
+}

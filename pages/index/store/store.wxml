@@ -1,0 +1,130 @@
+<view class="main">
+  <!-- 类型部分 -->
+
+  <!-- 问题部分 -->
+  <!-- 判断部分 -->
+  <block wx:if="{{questionList[current].type=='判断'}}">
+    <view class="question ">
+      <!-- 题目 -->
+      <view class="xuanz">{{questionList[current].type}} </view>
+      {{questionList[current].title}}
+    </view>
+    <!-- 四个选项 携带参数变量会自动小写-->
+    <view class="question_item1" bindtap="selectItem" data-selectId="1">
+
+      <radio class="question_select" checked="{{myChecked===1?true:false}}"> </radio>
+      <text class="question_item_name">A、正确</text>
+    </view>
+    <!-- 选项2 -->
+    <view class="question_item2 " bindtap="selectItem" data-selectId="10">
+      <radio class="question_select" checked="{{myChecked===10?true:false}}"> </radio>
+      <text class="question_item_name">B、错误</text>
+
+    </view>
+
+  </block>
+  <!-- 多选题 -->
+  <block wx:elif="{{questionList[current].type=='多选'}}">
+    <view class="question ">
+      <!-- 题目 -->
+      <view class="xuanz">{{questionList[current].type}} </view>
+      {{questionList[current].title}}
+    </view>
+    <!-- 四个选项 携带参数变量会自动小写-->
+    <view class="question_item1" bindtap="selectItem" data-selectId="1" data-index="0">
+      <radio class="question_select" checked="{{multiIndex[0].checked?true:false}}"> </radio>
+      <text class="question_item_name">{{questionList[current].answer_A}}</text>
+
+    </view>
+    <!-- 选项2 -->
+    <view class="question_item2 " bindtap="selectItem" data-selectId="10" data-index="1">
+      <radio class="question_select" checked="{{multiIndex[1].checked?true:false}}"> </radio>
+      <text class="question_item_name">{{questionList[current].answer_B}}</text>
+
+    </view>
+    <!-- 选项3 -->
+    <view class="question_item3" bindtap="selectItem" data-selectId="100" data-index="2">
+      <radio class="question_select" checked="{{multiIndex[2].checked?true:false}}"> </radio>
+      <text class="question_item_name">{{questionList[current].answer_C}}</text>
+
+    </view>
+    <!-- 选项4 -->
+    <view class="question_item2" bindtap="selectItem" data-selectId="1000" data-index="3">
+      <radio class="question_select" checked="{{multiIndex[3].checked?true:false}}"> </radio>
+      <text class="question_item_name">{{questionList[current].answer_D}}</text>
+
+    </view>
+    <!-- 选项5 -->
+    <view class="question_item2" bindtap="selectItem" data-selectId="10000" data-index="4">
+      <radio class="question_select" checked="{{multiIndex[4].checked?true:false}}"> </radio>
+      <text class="question_item_name">{{questionList[current].answer_E}}</text>
+
+    </view>
+  </block>
+  <!-- 单选题部分 -->
+  <block wx:elif="{{questionList[current].type=='单选'}}">
+    <view class="question ">
+      <!-- 题目 -->
+      <view class="xuanz">{{questionList[current].type}} </view>
+      {{questionList[current].title}}
+    </view>
+    <!-- 四个选项 携带参数变量会自动小写-->
+    <view class="question_item1" bindtap="selectItem" data-selectId="1">
+      <radio class="question_select" checked="{{myChecked===1?true:false}}"> </radio>
+      <text class="question_item_name">{{questionList[current].answer_A}}</text>
+
+    </view>
+    <!-- 选项2 -->
+    <view class="question_item2 " bindtap="selectItem" data-selectId="10">
+      <radio class="question_select" checked="{{myChecked===10?true:false}}"> </radio>
+      <text class="question_item_name">{{questionList[current].answer_B}}</text>
+
+    </view>
+    <!-- 选项3 -->
+    <view class="question_item3" bindtap="selectItem" data-selectId="100">
+      <radio class="question_select" checked="{{myChecked===100?true:false}}"> </radio>
+      <text class="question_item_name">{{questionList[current].answer_C}}</text>
+
+    </view>
+    <!-- 选项4 -->
+    <view class="question_item2" bindtap="selectItem" data-selectId="1000">
+      <radio class="question_select" checked="{{myChecked===1000?true:false}}"> </radio>
+      <text class="question_item_name">{{questionList[current].answer_D}}</text>
+    </view>
+
+  </block>
+  <!-- 简答题部分 -->
+  <block wx:if="{{questionList[current].type=='简答'}}">
+    <view class="question ">
+      <!-- 题目 -->
+      <view class="xuanz">{{questionList[current].type}} </view>
+      {{questionList[current].title}}
+    </view>
+    <view class='jd-txt'>【参考】
+      <view class='txt'>{{questionList[current].answer}}</view>
+    </view>
+  </block>
+
+  <!-- 下一题 -->
+  <view class="next" bindtap='next_question'>
+    <text class="next_detail">下一题</text>
+  </view>
+
+  <!-- 答案解析 -->
+  <view class="analysis" wx:if="{{questionList[current].type=='单选'||questionList[current].type=='判断'||questionList[current].type=='多选'}}">
+    <text>正确答案为：{{questionList[current].answer}}</text>
+  </view>
+  <!-- 底部收藏及反馈按钮 -->
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder" bindtap='select_store'>
+        <image class="item-store" src="{{store?'/images/store.png':'/images/store1.png'}}"></image>
+
+        <text class='bo-txt'>收藏</text>
+      </view>
+    </view>
+  </view>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>

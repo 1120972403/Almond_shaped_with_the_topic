@@ -1,0 +1,140 @@
+<!--pages/index/error/error.wxml-->
+<view class='content'>
+  <swiper indicator-dots='{{indicatorDots}}' class='swiper_itm'>
+    <view wx:for='{{questionList}}' wx:for-index='current'>
+      <swiper-item>
+        <view class="main">
+          <!-- 显示选择的错误答案 -->
+          <view wx:if="{{questionList[current].type=='单选'||questionList[current].type=='判断'||questionList[current].type=='多选'}}" bindtap='tap_answer' data-id="{{current}}">
+              <text class='answer_txt1'>您的错误答案为：【{{questionList[current].error_answer}}】</text>
+          </view>
+
+          <!-- 问题部分 -->
+          <!-- 判断部分 -->
+          <block wx:if="{{questionList[current].type=='判断'}}">
+            <view class="question">
+              <!-- 题目 -->
+              <view class="xuanz">{{questionList[current].type}} </view>
+              {{questionList[current].title}}
+            </view>
+            <!-- 四个选项 携带参数变量会自动小写-->
+            <view class="question_item1" data-selectId="1">
+
+              <radio class="question_select" disabled='true'> </radio>
+              <text class="question_item_name">A、正确</text>
+            </view>
+            <!-- 选项2 -->
+            <view class="question_item2 ">
+              <radio class="question_select" disabled='true'> </radio>
+              <text class="question_item_name">B、错误</text>
+
+            </view>
+
+          </block>
+          <!-- 多选题 使用checkbox-group -->
+          <block wx:elif="{{questionList[current].type=='多选'}}">
+            <view class="question ">
+              <!-- 题目 -->
+              <view class="xuanz">{{questionList[current].type}} </view>
+              {{questionList[current].title}}
+            </view>
+
+            <checkbox-group>
+              <view class="question_item3">
+                <checkbox value="1" class="question_select" disabled='true'>
+                </checkbox>
+                <text class="question_item_name">{{questionList[current].answer_A}}</text>
+              </view>
+
+              <view class="question_item3">
+                <checkbox value="10" class="question_select" disabled='true'>
+                </checkbox>
+                <text class=" question_item_name ">{{questionList[current].answer_B}}</text>
+              </view>
+
+              <view class="question_item3">
+                <checkbox value="100" class="question_select" disabled='true'>
+                </checkbox>
+                <text class="question_item_name">{{questionList[current].answer_C}}</text>
+              </view>
+
+              <view class="question_item3">
+                <checkbox value='1000' class="question_select" disabled='true'>
+                </checkbox>
+                <text class=" question_item_name ">{{questionList[current].answer_D}}</text>
+              </view>
+
+              <view class="question_item3">
+                <checkbox value='10000' class="question_select" disabled='true'>
+                </checkbox>
+                <text class="question_item_name">{{questionList[current].answer_E}}</text>
+              </view>
+            </checkbox-group>
+            <view>提示：{{text}}</view>
+
+          </block>
+          <!-- 单选题部分 -->
+          <block wx:elif="{{questionList[current].type=='单选'}}">
+            <view class="question ">
+              <!-- 题目 -->
+              <view class="xuanz">{{questionList[current].type}} </view>
+              {{questionList[current].title}}
+            </view>
+            <!-- 四个选项 携带参数变量会自动小写-->
+            <view class="question_item1">
+              <radio class="question_select" disabled='true'> </radio>
+              <text class="question_item_name">{{questionList[current].answer_A}}</text>
+
+            </view>
+            <!-- 选项2 -->
+            <view class="question_item2 ">
+              <radio class="question_select" disabled='true'> </radio>
+              <text class="question_item_name">{{questionList[current].answer_B}}</text>
+
+            </view>
+            <!-- 选项3 -->
+            <view class="question_item3">
+              <radio class="question_select" disabled='true'> </radio>
+              <text class="question_item_name">{{questionList[current].answer_C}}</text>
+
+            </view>
+            <!-- 选项4 -->
+            <view class="question_item2">
+              <radio class="question_select" disabled='true'> </radio>
+              <text class="question_item_name">{{questionList[current].answer_D}}</text>
+            </view>
+
+          </block>
+          <!-- 简答题部分 -->
+          <block wx:if="{{questionList[current].type=='简答'}}">
+            <view class="question ">
+              <!-- 题目 -->
+              <view class="xuanz">{{questionList[current].type}} </view>
+              {{questionList[current].title}}
+            </view>
+            <view class='jd-txt'>【参考】
+              <view class='txt'>{{questionList[current].answer}}</view>
+            </view>
+          </block>
+          <!-- 答案解析 -->
+          <view class="analysis" wx:if="{{questionList[current].type=='单选'||questionList[current].type=='判断'||questionList[current].type=='多选'}}">
+            <text>正确答案为：【{{questionList[current].answer}}】</text>
+          </view>
+        </view>
+        <!-- 底部移除按钮 -->
+        <view class="weui-flex">
+          <view>
+            <!-- 使用data-id将details_id（序号）传到js中 -->
+            <view class="placeholder" bindtap='delWrong' data-details_id="{{questionList[current].details_id}}">
+              <image class="item-store" src="/images/yichu1.png"></image>
+              <text class='bo-txt'>移除</text>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </view>
+  </swiper>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>

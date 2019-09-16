@@ -1,0 +1,28 @@
+/**index.wxss**/
+page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+.container_index{
+  height: 100%;
+  display: flex;
+  flex-direction:center;
+}
+
+.type-btn{
+  min-width: 500rpx;
+  border-radius: 30rpx;
+  border: solid #B4B7BA 8rpx;
+  margin: 30rpx;
+}
+.type-btn1{
+
+  width: 500rpx;
+  border-radius: 30rpx;
+  border: solid #B4B7BA 8rpx;
+  margin: 30rpx;
+
+
+}

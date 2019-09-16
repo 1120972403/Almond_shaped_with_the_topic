@@ -1,0 +1,11 @@
+/* pages/chapter/chapter.wxss */
+.weui-cell__bd{
+ font-size: 30rpx;
+  padding: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.weui-cell__ft ,.weui-cell__ft_in-access{
+  font-size: 30rpx;
+}

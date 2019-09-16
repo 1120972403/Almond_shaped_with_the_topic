@@ -1,0 +1,3 @@
+<!--pages/index/end/end.wxml-->
+<view class='txt'>得分，排名正在完善中，敬请期待！</view>
+<button class="weui-btn" type="primary" bindtap='back'>回到主页</button>

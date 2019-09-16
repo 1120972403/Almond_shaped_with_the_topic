@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/myinfo/myinfo",
+    "pages/myinfo/feedback/feedbook",
+    "pages/index/exam/exam",
+    "pages/chapter/chapter",
+    "pages/type_pre/type_pre",
+    "pages/index/end/end",
+    "pages/index/store/store",
+    "pages/index/error/error",
+    "pages/myinfo/dashang/dashang",
+    "pages/myinfo/logs/logs",
+    "pages/myinfo/guanyu/guanyu"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#4d82e6",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "杏林有题",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#999999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "练",
+        "iconPath": "images/lian.png",
+        "selectedIconPath": "images/lian1.png"
+      },
+      {
+        "pagePath": "pages/myinfo/myinfo",
+        "text": "我",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

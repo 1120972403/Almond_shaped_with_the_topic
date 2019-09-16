@@ -1,0 +1,46 @@
+.about {
+  margin: 5px;
+  
+}
+.txt{
+  font-size: 29rpx;
+}
+.about-wei {
+  text-align: center;
+}
+
+.about-img {
+  display: block;
+  width: 111;
+  height: 111px;
+  margin: 10px auto 0;
+}
+
+.about-title {
+  display: inline-block;
+  margin: 10px 0;
+   font-size: 29rpx;
+}
+
+.about-content {
+  text-indent: 2em;
+ font-size: 29rpx;
+  margin: 0 10px;
+  line-height: 1.5;
+}
+
+.about-addr {
+  font-size: 29rpx;
+  line-height: 2;
+  text-indent: 2em;
+}
+
+.about-tab {
+  margin-top: 20px;
+}
+
+.in-img {
+  width: 164px;
+  height: 110px;
+}
+

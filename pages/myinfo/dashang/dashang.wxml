@@ -1,0 +1,9 @@
+<view class='contair'>
+  <view class='title'>本答题小程序属于个人所有</view>
+  <view class='content'>如果您觉得小程序对您有帮助，感谢您赞善开发者, 所有的赞赏费将用于后期题库种类增加和高带宽服务器租赁
+  </view>
+  <text>开发者邮箱：1120972403@qq.com</text>
+  <image src="{{url}}" bindtouchstart='timestart' bindtouchend='timeend' bindtap='saveImg' class='img' mode='widthFix'></image>
+  <view class='title'>1、长按保存二维码图片</view>
+  <view class='title'>2、打开微信扫一扫，选择相册图片</view>
+</view>

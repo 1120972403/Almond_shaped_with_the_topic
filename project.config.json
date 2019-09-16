@@ -1,0 +1,109 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.1",
+	"appid": "wx7a464f73f713ef32",
+	"projectname": "kaoshi",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": -1,
+					"name": "练",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我",
+					"pathName": "pages/myinfo/myinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "考试页面",
+					"pathName": "pages/index/exam/exam",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "章节显示",
+					"pathName": "pages/index/exam/exam",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "章节",
+					"pathName": "pages/chapter/chapter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "error",
+					"pathName": "pages/index/error/error",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "测试",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "end",
+					"pathName": "pages/index/end/end",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "日志",
+					"pathName": "pages/myinfo/log/log",
+					"scene": null
+				}
+			]
+		}
+	}
+}

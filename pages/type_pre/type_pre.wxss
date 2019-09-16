@@ -1,0 +1,9 @@
+/* pages/type_pre/type_pre.wxss */
+.weui-grid__label{
+  font-size: 30rpx;
+}
+.weui-grid__icon{
+  width: 50rpx;
+  height: 50rpx;
+
+}

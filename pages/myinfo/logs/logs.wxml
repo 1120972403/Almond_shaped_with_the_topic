@@ -1,0 +1,14 @@
+<view class="timeline-container">
+  <block wx:for="{{newsList}}" wx:key="item.id">
+    <view class="timeline">
+      <view class="dotline">
+        <view class="line"></view>
+        <view class="dot"></view>
+      </view>
+      <view class="content">
+        <text class="course">{{item.time}}</text>
+        <text class="chapter">{{item.desc}}</text>
+      </view>
+    </view>
+  </block>
+</view>

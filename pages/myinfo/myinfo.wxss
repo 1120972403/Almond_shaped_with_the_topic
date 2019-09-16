@@ -1,0 +1,54 @@
+.avatar-wrapper {
+  background: #1b82d1;
+  padding: 25px 0;
+}
+
+.avatar-wrapper .avatar {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.avatar-wrapper .avatar image {
+  width: 100px;
+  height: 100px;
+}
+
+.avatar-wrapper .text {
+  text-align: center;
+  color: #fff;
+}
+
+.weui-cell__hd image {
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+/* 登录按钮 */
+.btn-login{
+margin: 0 auto;
+}
+.weui-cells::after{
+  content: none;
+  border-bottom: none;
+}
+
+.weui-cells::before{
+  border-top: none;
+}
+
+/* user.wxss */
+.list-wrapper{
+  display: flex;
+}
+
+ .share{
+    margin-top: 20rpx;
+    border:1px solid #E5E5E5;
+     font-size: 32rpx;
+    width: 30%;
+    /* align-items:center; */
+  } 
+  .weui-cell__bd{
+    font-size: 32rpx;
+  }

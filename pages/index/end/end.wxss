@@ -1,0 +1,9 @@
+/* pages/index/end/end.wxss */
+.txt{
+text-align: center;
+margin-top: 30px;
+}
+.weui-btn{
+  width: 90%;
+  margin: 220px auto;
+}

@@ -1,0 +1,19 @@
+<view class="about">
+  <view class="about-wei">
+    <view class="about-title">{{title}}</view>
+  </view>
+  <view class="about-content">{{intro}}</view>
+
+  <view class="about-addr">
+    <view class="about-tab">{{contab}}</view>
+    <view class='txt'>学校: {{address}}</view>
+    <view class='txt'>团队成员：{{team}}</view>
+    <view class='txt'>邮箱：{{email}}</view>
+    <view class='txt'>说明：{{shuoming}}</view>
+    <view class='txt'>下一阶段：
+      <view>1.完善"知了中医药"小程序中医药图谱集及健康小游戏，添加中药材识别功能等,</view>
+      <view>2.扩展"杏林有题"在其他学科上面的答题功能</view>
+      <view>3.开发一个关于"live中医大"的生活服务的小程序</view>
+    </view>
+  </view>
+</view>

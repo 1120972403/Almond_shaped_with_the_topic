@@ -1,0 +1,10 @@
+<view class="container_index">
+  <view class="userinfo">
+    <button bindtap="bindSequence" class='type-btn'> 顺序学习 </button>
+    <button bindtap="bindRandom" class='type-btn1'> 章节练题 </button>
+    <button bindtap="bindFavorite" class='type-btn1'> 专题练题 </button>
+    <button bindtap="bindStore" class='type-btn1'> 收藏 </button>
+    <button bindtap="bindError" class='type-btn1'> 错题 </button>
+  </view>
+
+</view>

@@ -1,0 +1,29 @@
+/* pages/myinfo/dashang/dashang.wxss */
+
+.contair {
+  display: flex;
+  margin: 20rpx;
+  flex-direction: column;
+  font-size: 32rpx;
+}
+
+.title {
+  text-align: center;
+}
+
+.content {
+  margin-top: 10rpx;
+  line-height: 30px;
+  margin-bottom: 20rpx;
+  color: red;
+}
+
+.img {
+  margin-top: 40rpx;
+  width: 200px;
+  vertical-align: middle;
+  margin: 0 auto;
+  /* display:flex;   
+  align-items: center;                
+  justify-content: center;     水平轴线居中 */
+}
